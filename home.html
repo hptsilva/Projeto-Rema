@@ -1,0 +1,127 @@
+<script>
+
+    // função para limpar o conteúdo do formulário
+    function limpar(){
+
+    document.forms["dados"]['w'].value = '';
+    document.forms["dados"]['carregamento'].value = '';
+    document.forms["dados"]['areaBC'].value = '';
+    document.forms["dados"]['areaDE'].value = '';
+    document.forms["dados"]['escoamentoBC'].value = '';
+    document.forms["dados"]['escoamentoDE'].value = '';
+    document.forms["dados"]['elasticidadeBC'].value = '';
+    document.forms["dados"]['elasticidadeDE'].value = '';
+    document.forms["dados"]['ac'].value = '';
+    document.forms["dados"]['ce'].value = '';
+    document.forms["dados"]['ef'].value = '';
+    document.forms["dados"]['bc'].value = '';
+    document.forms["dados"]['de'].value = '';
+
+
+    return true
+
+    }
+
+    // função para verificar se existe algum campo vazio no formulário
+    function aviso(){
+
+        let w = document.forms["dados"]['w'].value;
+        let carregamento = document.forms["dados"]["carregamento"].value;
+        let areaBC = document.forms['dados']['areaBC'].value;
+        let areaDE = document.forms['dados']['areaDE'].value;
+        let escoamentoBC = document.forms['dados']['escoamentoBC'].value;
+        let escoamentoDE = document.forms['dados']['escoamentoDE'].value;
+        let elasticidadeBC = document.forms['dados']['elasticidadeBC'].value;
+        let elasticidadeDE = document.forms['dados']['elasticidadeDE'].value;
+        let ac = document.forms['dados']['ac'].value;
+        let ce = document.forms['dados']['ce'].value;
+        let ef = document.forms['dados']['ef'].value;
+        let bc = document.forms['dados']['bc'].value;
+        let de = document.forms['dados']['de'].value;
+
+        if (w === "" ||
+            carregamento === "" ||
+            areaBC === "" ||
+            areaDE === "" ||
+            escoamentoBC === "" ||
+            escoamentoDE === "" ||
+            elasticidadeBC === "" ||
+            elasticidadeDE === "" ||
+            ac === "" ||
+            ce === "" ||
+            ef === "" ||
+            bc === "" ||
+            de === ""){
+
+            alert("Preencha o formulário corretamente!");
+            return false
+
+        }else{
+
+            return true;
+
+        }
+
+    }
+
+</script>
+<h1 style="text-align: center; font-size: 35px">Projeto 1</h1>
+<div>
+    <div style="text-align: right; padding-right: 60px; padding-bottom: 250px">
+        <img src="Imagens/Screenshot_1.png" alt="Problema" width="526" height="376">
+        <div class="form">
+            <form name="dados" method="post" action="index.php?pagina=resultado" onsubmit="return aviso()">
+
+                <h2 style="font-size: 20px">Insira os dados:</h2>
+                <br><br>
+
+                <label>
+                    Insira a distribuição de W em N/m²:
+                    <input name="w" type="number" placeholder="Distribuição de W" step=".01">
+                    <br><br>
+                    Valor do carregamento P em Newtons:
+                    <input name="carregamento" type="number" placeholder="Carregamento P" step=".01">
+                    <br><br>
+                    Área da seção transversal do arame BC em m²:
+                    <input name="areaBC" type="number" placeholder="Área da seção transversal do arame" step=".01">
+                    <br><br>
+                    Área da seção transversal do arame DE em m²:
+                    <input name="areaDE" type="number" placeholder="Área da seção transversal do arame" step=".01">
+                    <br><br>
+                    Limite de escoamento do arame BC em GPa:
+                    <input name="escoamentoBC" type="number" placeholder="Limite de escoamento" step=".01">
+                    <br><br>
+                    Limite de escoamento do arame DE em GPa:
+                    <input name="escoamentoDE" type="number" placeholder="Limite de escoamento" step=".01">
+                    <br><br>
+                    Módulo de elasticidade do arame BC em GPa:
+                    <input name="elasticidadeBC" type="number" placeholder="Módulo de elasticidade" step=".01">
+                    <br><br>
+                    Módulo de elasticidade do arame DE em GPa:
+                    <input name="elasticidadeDE" type="number" placeholder="Módulo de elasticidade" step=".01">
+                    <br><br>
+                    Distância em METROS em L3:
+                    <input name="ac" type="number" placeholder="Distância L3" step=".01">
+                    <br><br>
+                    Distância em METROS em L4:
+                    <input name="ce" type="number" placeholder="Distância L4" step=".01">
+                    <br><br>
+                    Distância em METROS em L5:
+                    <input name="ef" type="number" placeholder="Distância L5" step=".01">
+                    <br><br>
+                    Comprimento em METROS no arame L1:
+                    <input name="bc" type="number" placeholder="Comprimento L1" step=".01">
+                    <br><br>
+                    Comprimento em METROS no arame L2:
+                    <input name="de" type="number" placeholder="Comprimento L2" step=".01">
+                    <br><br>
+                    <input style="background-color: greenyellow" type="submit" value="Enviar dados">
+                    <input style="background-color: indianred" type="button" onclick="limpar()" value="Limpar">
+                </label>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
