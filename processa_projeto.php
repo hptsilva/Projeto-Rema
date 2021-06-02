@@ -11,8 +11,8 @@
     $p = $_POST['carregamento']; //carregamento P
     $area_arameBC = $_POST['areaBC']; // area da seção transversal do arame BC
     $area_arameDE = $_POST['areaDE']; // area da seção transversal do arame DE
-    $escoamentoBC = $_POST['escoamentoBC']; //limite de escoamente do arema BC
-    $escoamentoDE = $_POST['escoamentoDE']; //limite de escoamente do arema DE
+    $escoamentoBC = $_POST['escoamentoBC']; //limite de escoamente do arame BC
+    $escoamentoDE = $_POST['escoamentoDE']; //limite de escoamente do arame DE
     $elasticidadeBC = $_POST['elasticidadeBC']; //módulo de elasticidade do arame BC
     $elasticidadeDE = $_POST['elasticidadeDE']; //módulo de elasticidade do arame DE
     $ac = $_POST['ac']; // valor de L3
