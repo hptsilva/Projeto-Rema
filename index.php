@@ -22,6 +22,4 @@ if($pagina == 'resultado'){
 
 }
 
-include 'footer.html';
-
 ?>

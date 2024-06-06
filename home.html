@@ -65,60 +65,59 @@
     }
 
 </script>
-<h1 style="text-align: center; font-size: 35px">Projeto 1</h1>
-<div>
-    <div style="text-align: right; padding-right: 60px; padding-bottom: 250px">
-        <img src="Imagens/Screenshot_1.png" alt="Problema" width="526" height="376">
-        <div class="form">
-            <form name="dados" method="post" action="index.php?pagina=resultado" onsubmit="return aviso()">
-
+<h1 class="text-center">Projeto 1</h1>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <img id="imagem" src="Imagens/Screenshot_1.png" alt="Problema" width="800" >
+        </div>
+        <div class="col">
+            <form name="dados" method="post" action="index.php?pagina=resultado" onsubmit="return aviso()" id="formulario">
                 <h2 style="font-size: 20px">Insira os dados:</h2>
-                <br><br>
-
+                <br>
                 <label>
                     Insira a distribuição de W em N/m²:
-                    <input name="w" type="number" placeholder="Distribuição de W" step=".01">
-                    <br><br>
+                    <input class="form-control" name="w" type="number" placeholder="Distribuição de W" step=".01">
+                    <br>
                     Valor do carregamento P em Newtons:
-                    <input name="carregamento" type="number" placeholder="Carregamento P" step=".01">
-                    <br><br>
+                    <input class="form-control" name="carregamento" type="number" placeholder="Carregamento P" step=".01">
+                    <br>
                     Área da seção transversal do arame BC em m²:
-                    <input name="areaBC" type="number" placeholder="Área da seção transversal do arame" step=".01">
-                    <br><br>
+                    <input class="form-control" name="areaBC" type="number" placeholder="Área da seção transversal do arame" step=".01">
+                    <br>
                     Área da seção transversal do arame DE em m²:
-                    <input name="areaDE" type="number" placeholder="Área da seção transversal do arame" step=".01">
-                    <br><br>
+                    <input class="form-control" name="areaDE" type="number" placeholder="Área da seção transversal do arame" step=".01">
+                    <br>
                     Limite de escoamento do arame BC em GPa:
-                    <input name="escoamentoBC" type="number" placeholder="Limite de escoamento" step=".01">
-                    <br><br>
+                    <input class="form-control" name="escoamentoBC" type="number" placeholder="Limite de escoamento" step=".01">
+                    <br>
                     Limite de escoamento do arame DE em GPa:
-                    <input name="escoamentoDE" type="number" placeholder="Limite de escoamento" step=".01">
-                    <br><br>
+                    <input class="form-control" name="escoamentoDE" type="number" placeholder="Limite de escoamento" step=".01">
+                    <br>
                     Módulo de elasticidade do arame BC em GPa:
-                    <input name="elasticidadeBC" type="number" placeholder="Módulo de elasticidade" step=".01">
-                    <br><br>
+                    <input class="form-control" name="elasticidadeBC" type="number" placeholder="Módulo de elasticidade" step=".01">
+                    <br>
                     Módulo de elasticidade do arame DE em GPa:
-                    <input name="elasticidadeDE" type="number" placeholder="Módulo de elasticidade" step=".01">
-                    <br><br>
+                    <input class="form-control" name="elasticidadeDE" type="number" placeholder="Módulo de elasticidade" step=".01">
+                    <br>
                     Distância em METROS em L3:
-                    <input name="ac" type="number" placeholder="Distância L3" step=".01">
-                    <br><br>
+                    <input class="form-control" name="ac" type="number" placeholder="Distância L3" step=".01">
+                    <br>
                     Distância em METROS em L4:
-                    <input name="ce" type="number" placeholder="Distância L4" step=".01">
-                    <br><br>
+                    <input class="form-control" name="ce" type="number" placeholder="Distância L4" step=".01">
+                    <br>
                     Distância em METROS em L5:
-                    <input name="ef" type="number" placeholder="Distância L5" step=".01">
-                    <br><br>
+                    <input class="form-control" name="ef" type="number" placeholder="Distância L5" step=".01">
+                    <br>
                     Comprimento em METROS no arame L1:
-                    <input name="bc" type="number" placeholder="Comprimento L1" step=".01">
-                    <br><br>
+                    <input class="form-control" name="bc" type="number" placeholder="Comprimento L1" step=".01">
+                    <br>
                     Comprimento em METROS no arame L2:
-                    <input name="de" type="number" placeholder="Comprimento L2" step=".01">
-                    <br><br>
-                    <input style="background-color: greenyellow" type="submit" value="Enviar dados">
-                    <input style="background-color: indianred" type="button" onclick="limpar()" value="Limpar">
+                    <input class="form-control"s name="de" type="number" placeholder="Comprimento L2" step=".01">
+                    <br>
+                    <input class="btn btn-success" type="submit" value="Enviar dados">
+                    <input class="btn btn-danger" type="button" onclick="limpar()" value="Limpar">
                 </label>
-
             </form>
         </div>
     </div>
